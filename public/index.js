@@ -35,7 +35,7 @@ async function main() {
     new Chart(timeChartCanvas.getContext('2d'), {
         type: 'line',
         data: {
-            labels: stocks[0].values.map(value => value.datetime),
+            labels: stocks[0].values.map((value) => value.datetime),
             datasets: stocks.map(stock => ({
                 label: stock.meta.symbol,
                 backgroundColor: getColor(stock.meta.symbol),
@@ -84,6 +84,7 @@ async function main() {
                 }
         });
 
+} 
 
     function findHighest(values) {
         let highest = 0;
@@ -103,5 +104,6 @@ async function main() {
         return total / values.length
     }
 
-    main()
-}
+   
+
+main()
